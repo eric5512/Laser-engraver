@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ATSS_lib")(type "KiCad")(uri "C:/Users/Eric/Desktop/etc/GitHub/Automatic-sampler/Schematics/Electronics/ATSS_lib.pretty")(options "")(descr ""))
+)
