@@ -38,3 +38,5 @@ GUI/node_modules
 GUI/build
 Firmware/src/pass.h
 *.zip
+\#*#
+_autosave*

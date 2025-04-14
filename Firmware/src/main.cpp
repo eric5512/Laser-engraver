@@ -1,10 +1,13 @@
 #include <ESP8266WiFi.h>
+#include "Program.h"
 #include "pass.h"
 
 #define MAGIC_NUMBER 0x69
 #define PORT 420
 
 WiFiServer server = WiFiServer(PORT);
+
+Program program[2];
 
 void setup() {
     Serial.begin(9600);
@@ -14,6 +17,8 @@ void setup() {
     Serial.println("\nConnected!");
     server.begin();
 }
+
+
 
 void loop() {
     WiFiClient client = server.accept();
@@ -26,13 +31,20 @@ void loop() {
             if (client.available() > 0) {
                 char op = client.read(); // Pong server
                 client.write(op);
-                // switch (op) {
-                // case 0x00:
-                //     // TODO: do stuff
-                //     break;
-                // default:
-                //     break;
-                // }
+                switch (op) {
+                case 0x00: // Setpoint
+                    // TODO: Setpoint
+                    break;
+                case 0x02: // Store program
+                    // TODO: Store program
+                    break;
+                case 0x04: // Start program
+                    // TODO: Start program
+                    break;
+                default:
+                    // TODO: Return error msg
+                    break;
+                }
             }
         }
 
