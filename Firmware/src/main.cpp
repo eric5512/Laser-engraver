@@ -7,7 +7,7 @@
 
 WiFiServer server = WiFiServer(PORT);
 
-Program program[2];
+volatile Program program[1];
 
 void setup() {
     Serial.begin(9600);
@@ -42,6 +42,7 @@ void loop() {
                     // TODO: Start program
                     break;
                 default:
+                    // program[op].ins[op].x = op;
                     // TODO: Return error msg
                     break;
                 }

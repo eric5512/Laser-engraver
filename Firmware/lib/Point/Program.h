@@ -7,5 +7,5 @@ struct Instruction {
 };
 
 struct Program {
-    Instruction ins[1024*1024];
+    Instruction ins[1024*10];
 };
